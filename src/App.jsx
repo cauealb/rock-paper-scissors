@@ -1,8 +1,12 @@
+import { ThemeProvider } from "styled-components"
+import { GlobalCSS } from "../../globalCSS"
+
 export function App() {
 
   return (
     <>
-      <h1>Hello</h1> 
+    <ThemeProvider theme={GlobalCSS}>
+    </ThemeProvider> 
     </>
   )
 }
