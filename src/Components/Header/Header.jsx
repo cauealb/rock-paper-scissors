@@ -1,16 +1,24 @@
+import { useState } from "react";
+import { StyledHeader, StyledDivPoints } from "./Header.s";
+
+
 export function Header() {
+
+    const [scoreMachine, setScoreMachine] = useState(0)
+    const [scoreMe, setScoreMe] = useState(0)
+
     return (
         <>
-            <header>
-                <div>
+            <StyledHeader>
+                <StyledDivPoints>
                     <h1>Score (machine)</h1>
-                    <h2>0</h2>
-                </div>
-                <div>
+                    <h2>{scoreMachine}</h2>
+                </StyledDivPoints>
+                <StyledDivPoints>
                     <h1>Score (me)</h1>
-                    <h2>0</h2>
-                </div>
-            </header>
+                    <h2>{scoreMe}</h2>
+                </StyledDivPoints>
+            </StyledHeader>
         </>
     )
 }
