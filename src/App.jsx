@@ -1,5 +1,6 @@
 import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
+import { GlobalCSS } from "../globalCSS"
 
 export function App() {
 
@@ -7,7 +8,7 @@ export function App() {
     <>
     <ThemeProvider theme={theme}>
 
-
+      <GlobalCSS />
     </ThemeProvider> 
     </>
   )
