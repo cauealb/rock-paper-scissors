@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
     padding: 1rem;
     font-family: 'Courier New', Courier, monospace;
     box-shadow: 1px 0 5px gray;
-    font-size: 4rem;
+    font-size: 1rem;
 `;
 
 export const StyledDivPoints = styled.div`
