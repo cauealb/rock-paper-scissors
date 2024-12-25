@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { StyledHeader, StyledDivPoints } from "./Header.s";
+import { StyledHeader, StyledDivPoitsMe, StyledDivPoitsMachine } from "./Header.s";
+import { Star, Robot } from 'phosphor-react'
 
 export function Header() {
 
@@ -9,15 +10,21 @@ export function Header() {
     return (
         <>
             <StyledHeader>
-                <StyledDivPoints>
-                    <h1>Score (machine)</h1>
+                <StyledDivPoitsMachine>
+                    <div>
+                        <h1>Score (machine)</h1>
+                        <Robot size={13} weight="bold"/>
+                    </div>
                     <h2>{scoreMachine}</h2>
-                </StyledDivPoints>
+                </StyledDivPoitsMachine>
                 <h1>Rock Paper Scissors</h1>
-                <StyledDivPoints>
-                    <h1>Score (me)</h1>
+                <StyledDivPoitsMe>
+                    <div>
+                        <Star size={13} color="#FFF200" weight="fill"/>
+                        <h1> Score (me)</h1>
+                    </div>
                     <h2>{scoreMe}</h2>
-                </StyledDivPoints>
+                </StyledDivPoitsMe>
             </StyledHeader>
         </>
     )
