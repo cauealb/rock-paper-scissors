@@ -5,9 +5,8 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    font-family: 'Courier New', Courier, monospace;
     box-shadow: 1px 0 5px gray;
-    font-size: 4rem;
+    font-size: 4.5rem;
 `;
 
 const DivBasePoints = styled.div`
@@ -29,4 +28,18 @@ export const StyledDivPoitsMe = styled(DivBasePoints)`
 
 export const StyledDivPoitsMachine = styled(DivBasePoints)`
     color: #FC736E;
+`;
+
+export const DivLogo = styled.div`
+    display: flex;
+    gap: 0.50rem;
+    font-size: 4.5rem;
+`;
+
+export const StyledLogo1 = styled.h1`
+    color: #FC736E;
+`;
+
+export const StyledLogo2 = styled.h1`
+    color: #007FFF;
 `;

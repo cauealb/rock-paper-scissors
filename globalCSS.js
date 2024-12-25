@@ -6,5 +6,6 @@ export const GlobalCSS = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
         font-size: 62.5%;
+        font-family: "Jersey 20";
     }
 `;

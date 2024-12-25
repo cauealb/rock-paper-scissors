@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledHeader, StyledDivPoitsMe, StyledDivPoitsMachine } from "./Header.s";
+import { StyledHeader, StyledDivPoitsMe, StyledDivPoitsMachine, StyledLogo1, StyledLogo2, DivLogo } from "./Header.s";
 import { Star, Robot } from 'phosphor-react'
 
 export function Header() {
@@ -17,7 +17,9 @@ export function Header() {
                     </div>
                     <h2>{scoreMachine}</h2>
                 </StyledDivPoitsMachine>
-                <h1>Rock Paper Scissors</h1>
+                <DivLogo>
+                    <StyledLogo1>Rock Paper </StyledLogo1><StyledLogo2>Scissors</StyledLogo2>
+                </DivLogo>
                 <StyledDivPoitsMe>
                     <div>
                         <Star size={13} color="#FFF200" weight="fill"/>
