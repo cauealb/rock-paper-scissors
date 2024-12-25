@@ -5,7 +5,6 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    box-shadow: 1px 0 5px gray;
     font-size: 4.5rem;
 `;
 
@@ -15,9 +14,12 @@ const DivBasePoints = styled.div`
     align-items: center;
     margin: 0 1.6rem;
     line-height: 1.4;
+    letter-spacing: 1px;
+    font-size: 4rem;
 
     div {
         display: flex;
+        align-items: center;
         gap: 0.75rem;
     }
 `;
