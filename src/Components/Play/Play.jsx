@@ -1,5 +1,5 @@
-import { Robot  } from "phosphor-react"
 import { StyledSectionPrincipal, StyledBasePlay, StyledOption, RockMachine, PaperMachine, SciossorsMachine, StyledOptionDiv } from "./Play.s"
+import { Scissors, Scroll } from 'phosphor-react'
 
 export function Play() {
     return (
@@ -14,11 +14,11 @@ export function Play() {
                         </StyledOption>
                         <StyledOption>
                             <p>Paper</p>
-                            <PaperMachine></PaperMachine>
+                            <PaperMachine><Scroll size={50} /></PaperMachine>
                         </StyledOption>
                         <StyledOption>
                             <p>Scissors</p>
-                            <SciossorsMachine></SciossorsMachine>
+                            <SciossorsMachine><Scissors size={50} /></SciossorsMachine>
                         </StyledOption>
                     </StyledOptionDiv>
                 </StyledBasePlay>

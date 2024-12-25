@@ -52,6 +52,10 @@ const StyledBollPlay = styled.div`
     width: 80px;
     height: 80px;
     border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #868686;
 `;;
 
 export const RockMachine = styled(StyledBollPlay)`
