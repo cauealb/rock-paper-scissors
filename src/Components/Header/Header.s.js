@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    font-size: 4.5rem;
+    /* font-size: 2rem; */
 `;
 
 const DivBasePoints = styled.div`
@@ -15,7 +15,7 @@ const DivBasePoints = styled.div`
     margin: 0 1.6rem;
     line-height: 1.4;
     letter-spacing: 1px;
-    font-size: 4rem;
+    font-size: 0.95rem;
 
     div {
         display: flex;
@@ -35,7 +35,7 @@ export const StyledDivPoitsMachine = styled(DivBasePoints)`
 export const DivLogo = styled.div`
     display: flex;
     gap: 0.50rem;
-    font-size: 4.5rem;
+    font-size: 2rem;
 `;
 
 export const StyledLogo1 = styled.h1`
