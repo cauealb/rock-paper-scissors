@@ -5,7 +5,6 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    /* font-size: 2rem; */
 `;
 
 const DivBasePoints = styled.div`

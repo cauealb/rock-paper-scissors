@@ -1,27 +1,48 @@
 import styled from "styled-components";
 
-export const StyledPrincipalSection = styled.section`
+export const StyledSectionPrincipal = styled.section`
+    display: flex;
     margin: 15rem auto;
+    width: 90%;
+`;
+
+export const StyledBasePlay = styled.div`
+    text-align: center;
+    width: 25%;
+`;
+
+export const StyledOptionDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: yellow;
-    width: 80%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
 `;
 
-export const StyledPrincipalMachine = styled.div`
+export const StyledOption = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 0.90rem;
-    box-shadow: 4px 4px 7px gray;
-    cursor: pointer;
-    transition: all 0.2s linear;
-    border-radius: 8px;
+    gap: 1rem;
 
     &:hover {
-        background-color: #E1E1E6
+        cursor: not-allowed;
     }
+`;
+
+const StyledBollPlay = styled.div`
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+`;;
+
+export const RockMachine = styled(StyledBollPlay)`
+    background-color: #9CCEFF;
+`;
+
+export const PaperMachine = styled(StyledBollPlay)`
+    background-color: #FFC3C1;
+`;
+
+export const SciossorsMachine = styled(StyledBollPlay)`
+    background-color: #9CCEFF;
 `;
