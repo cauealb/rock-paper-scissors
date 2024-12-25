@@ -1,4 +1,4 @@
-import { StyledSectionPrincipal, StyledBasePlay, StyledOption, RockMachine, PaperMachine, SciossorsMachine, StyledOptionDiv } from "./Play.s"
+import { StyledSectionPrincipal, StyledBasePlay, StyledOption, RockMachine, PaperMachine, SciossorsMachine, StyledOptionDiv, StyledVS } from "./Play.s"
 import { Scissors, Scroll } from 'phosphor-react'
 
 export function Play() {
@@ -22,7 +22,7 @@ export function Play() {
                         </StyledOption>
                     </StyledOptionDiv>
                 </StyledBasePlay>
-                <h1>VS</h1>
+                <StyledVS>VS</StyledVS>
                 <StyledBasePlay>
                     <h2>Choose your option  </h2>
                     <StyledOptionDiv>

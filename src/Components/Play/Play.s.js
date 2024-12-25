@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledSectionPrincipal = styled.section`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 15rem auto;
     width: 90%;
 `;
@@ -18,7 +19,6 @@ export const StyledBasePlay = styled.div`
     h2 {
         font-size: 2rem;
         text-align: center;
-        width: 60%;
         margin: auto;
     }
 `;
@@ -69,3 +69,8 @@ export const PaperMachine = styled(StyledBollPlay)`
 export const SciossorsMachine = styled(StyledBollPlay)`
     background-color: #9CCEFF;
 `;
+
+export const StyledVS = styled.h2`
+    font-size: 20rem;
+    align-self: flex-end;
+`; 
