@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledSectionPrincipal = styled.section`
     display: flex;
+    justify-content: space-between;
     margin: 15rem auto;
     width: 90%;
 `;
@@ -9,12 +10,30 @@ export const StyledSectionPrincipal = styled.section`
 export const StyledBasePlay = styled.div`
     text-align: center;
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
 `;
 
 export const StyledOptionDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+
+    p {
+        font-size: 1.3rem;
+        color: #CFCFCF;
+        letter-spacing: 1px
+    }
 `;
 
 export const StyledOption = styled.div`
@@ -30,8 +49,8 @@ export const StyledOption = styled.div`
 `;
 
 const StyledBollPlay = styled.div`
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%; 
 `;;
 
