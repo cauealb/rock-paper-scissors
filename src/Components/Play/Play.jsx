@@ -23,23 +23,23 @@ export function Play() {
                     </StyledOptionDiv>
                 </StyledBasePlay>
                 <h1>VS</h1>
-                <div>
+                <StyledBasePlay>
                     <h2>Choose your option  </h2>
-                    <div>
-                        <div>
+                    <StyledOptionDiv>
+                        <StyledOption>
                             <p>Rock</p>
-                            <div></div>
-                        </div>
-                        <div>
+                            <RockMachine></RockMachine>
+                        </StyledOption>
+                        <StyledOption>
                             <p>Paper</p>
-                            <div></div>
-                        </div>
-                        <div>
+                            <PaperMachine><Scroll size={50} /></PaperMachine>
+                        </StyledOption>
+                        <StyledOption>
                             <p>Scissors</p>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
+                            <SciossorsMachine><Scissors size={50} /></SciossorsMachine>
+                        </StyledOption>
+                    </StyledOptionDiv>
+                </StyledBasePlay>
             </StyledSectionPrincipal>
         </>
     )
