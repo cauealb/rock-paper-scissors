@@ -11,5 +11,6 @@ export const GlobalCSS = createGlobalStyle`
         font-size: 62.5%;
         min-height: 100vh;
         font-family: monospace;
+        background-color: ${props => props.theme['--blue-200']}
     }
 `;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledHeader, StyledDivPoints } from "./Header.s";
+import { StyledHeader, StyledScoreMachine, StyledScoreMe, LogoPart1, LogoPart2 } from "./Header.s";
 
 export function Header() {
 
@@ -9,15 +9,17 @@ export function Header() {
     return (
         <>
             <StyledHeader>
-                <StyledDivPoints>
+                <StyledScoreMachine>
                     <h1>Score (machine)</h1>
                     <h2>{scoreMachine}</h2>
-                </StyledDivPoints>
-                <h1>Rock Paper Scissors</h1>
-                <StyledDivPoints>
+                </StyledScoreMachine>
+                <div>
+                    <LogoPart1>Rock Paper </LogoPart1><LogoPart2>Scissors</LogoPart2>
+                </div>
+                <StyledScoreMe>
                     <h1>Score (me)</h1>
                     <h2>{scoreMe}</h2>
-                </StyledDivPoints>
+                </StyledScoreMe>
             </StyledHeader>
         </>
     )
