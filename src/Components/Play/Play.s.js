@@ -48,6 +48,12 @@ export const StyledOption = styled.div`
     }
 `;
 
+export const StyledOptionMe = styled(StyledOption)`
+    &:hover {
+        cursor: pointer;
+    }
+`
+
 const StyledBollPlay = styled.div`
     width: 80px;
     height: 80px;
@@ -55,19 +61,35 @@ const StyledBollPlay = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #868686;
 `;;
 
 export const RockMachine = styled(StyledBollPlay)`
     background-color: #9CCEFF;
+    color: #868686;
 `;
 
 export const PaperMachine = styled(StyledBollPlay)`
     background-color: #FFC3C1;
+    color: #868686;
 `;
 
 export const SciossorsMachine = styled(StyledBollPlay)`
     background-color: #9CCEFF;
+    color: #868686;
+`;
+
+// -----------------------------------------------------------
+
+export const RockMe = styled(StyledBollPlay)`
+    background-color: #007FFF;
+`;
+
+export const PaperMe = styled(StyledBollPlay)`
+    background-color: #FC736E;
+`;
+
+export const SciossorsMe = styled(StyledBollPlay)`
+    background-color: #007FFF;
 `;
 
 export const StyledVS = styled.h2`
