@@ -31,7 +31,7 @@ export const StyledOptionDiv = styled.div`
 
     p {
         font-size: 1.3rem;
-        color: #CFCFCF;
+        color: ${props => props.theme['--gray']};
         letter-spacing: 1px
     }
 `;
@@ -64,32 +64,32 @@ const StyledBollPlay = styled.div`
 `;;
 
 export const RockMachine = styled(StyledBollPlay)`
-    background-color: #9CCEFF;
+    background-color: ${props => props.theme['--blue-secound']};
     color: #868686;
 `;
 
 export const PaperMachine = styled(StyledBollPlay)`
-    background-color: #FFC3C1;
+    background-color: ${props => props.theme['--red-secound']};
     color: #868686;
 `;
 
 export const SciossorsMachine = styled(StyledBollPlay)`
-    background-color: #9CCEFF;
+    background-color: ${props => props.theme['--blue-secound']};
     color: #868686;
 `;
 
 // -----------------------------------------------------------
 
 export const RockMe = styled(StyledBollPlay)`
-    background-color: #007FFF;
+    background-color: ${props => props.theme['--blue-principal']};
 `;
 
 export const PaperMe = styled(StyledBollPlay)`
-    background-color: #FC736E;
+    background-color: ${props => props.theme['--red-principal']};
 `;
 
 export const SciossorsMe = styled(StyledBollPlay)`
-    background-color: #007FFF;
+    background-color: ${props => props.theme['--blue-principal']};
 `;
 
 export const StyledVS = styled.h2`
