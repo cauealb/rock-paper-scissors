@@ -1,5 +1,7 @@
 import { StyledSectionPrincipal, StyledBasePlay, StyledOption, RockMachine, PaperMachine, SciossorsMachine, StyledOptionDiv, StyledVS, StyledOptionMe, RockMe, PaperMe, SciossorsMe } from "./Play.s"
 import { Scissors, Scroll } from 'phosphor-react'
+import rockSecound from '../../assets/iconRockSecound.svg'
+import rockPrincipal from '../../assets/iconRockPrincipal.svg'
 
 export function Play() {
     return (
@@ -10,7 +12,7 @@ export function Play() {
                     <StyledOptionDiv>
                         <StyledOption>
                             <p>Rock</p>
-                            <RockMachine></RockMachine>
+                            <RockMachine><img src={rockSecound} width={50}/></RockMachine>
                         </StyledOption>
                         <StyledOption>
                             <p>Paper</p>
@@ -28,7 +30,7 @@ export function Play() {
                     <StyledOptionDiv>
                         <StyledOptionMe>
                             <p>Rock</p>
-                            <RockMe></RockMe>
+                            <RockMe><img src={rockPrincipal} width={50}/></RockMe>
                         </StyledOptionMe>
                         <StyledOptionMe>
                             <p>Paper</p>
