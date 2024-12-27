@@ -72,17 +72,17 @@ const StyledBollPlay = styled.div`
 
 export const RockMachine = styled(StyledBollPlay)`
     background-color: ${props => props.theme['--blue-secound']};
-    color: ${props => props.theme['--gray-secound']}
+    color: ${props => props.theme['--gray-secound']};
 `;
 
 export const PaperMachine = styled(StyledBollPlay)`
     background-color: ${props => props.theme['--red-secound']};
-    color: ${props => props.theme['--gray-secound']}
+    color: ${props => props.theme['--gray-secound']};
 `;
 
 export const SciossorsMachine = styled(StyledBollPlay)`
     background-color: ${props => props.theme['--blue-secound']};
-    color: ${props => props.theme['--gray-secound']}
+    color: ${props => props.theme['--gray-secound']};
 `;
 
 // -----------------------------------------------------------
