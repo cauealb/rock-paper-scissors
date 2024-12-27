@@ -47,6 +47,18 @@ export const StyledOption = styled.div`
 
 export const StyledOptionMe = styled(StyledOption)`
     cursor: pointer;
+    
+    p{
+        color: ${props => props.theme['--gray-label']};
+        transition: all 0.2s linear;
+        opacity: 0;
+    }
+
+    &:hover {
+        P{
+            opacity: 1;
+        }
+    }
 `
 
 const StyledBollPlay = styled.div`
@@ -60,17 +72,17 @@ const StyledBollPlay = styled.div`
 
 export const RockMachine = styled(StyledBollPlay)`
     background-color: ${props => props.theme['--blue-secound']};
-    color: #868686;
+    color: ${props => props.theme['--gray-secound']}
 `;
 
 export const PaperMachine = styled(StyledBollPlay)`
     background-color: ${props => props.theme['--red-secound']};
-    color: #868686;
+    color: ${props => props.theme['--gray-secound']}
 `;
 
 export const SciossorsMachine = styled(StyledBollPlay)`
     background-color: ${props => props.theme['--blue-secound']};
-    color: #868686;
+    color: ${props => props.theme['--gray-secound']}
 `;
 
 // -----------------------------------------------------------
