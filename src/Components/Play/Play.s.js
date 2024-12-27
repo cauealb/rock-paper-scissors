@@ -42,16 +42,11 @@ export const StyledOption = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
-    &:hover {
-        cursor: not-allowed;
-    }
+    cursor: not-allowed;
 `;
 
 export const StyledOptionMe = styled(StyledOption)`
-    &:hover {
-        cursor: pointer;
-    }
+    cursor: pointer;
 `
 
 const StyledBollPlay = styled.div`
