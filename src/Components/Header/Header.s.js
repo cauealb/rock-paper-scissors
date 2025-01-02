@@ -32,7 +32,10 @@ export const StyledDivPoitsMachine = styled(DivBasePoints)`
 `;
 
 export const DivLogo = styled.div`
-    display: flex;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 0.50rem;
     font-size: 2rem;
 `;

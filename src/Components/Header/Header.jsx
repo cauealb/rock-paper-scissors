@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StyledHeader, StyledDivPoitsMe, StyledDivPoitsMachine, StyledLogo1, StyledLogo2, DivLogo } from "./Header.s";
 import { Star, Robot } from 'phosphor-react'
+import { Play } from "../Play/Play";
 
 export function Header() {
 
@@ -28,6 +29,7 @@ export function Header() {
                     <h2>{scoreMe}</h2>
                 </StyledDivPoitsMe>
             </StyledHeader>
+            <Play />
         </>
     )
 }

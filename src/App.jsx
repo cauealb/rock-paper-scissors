@@ -10,7 +10,6 @@ export function App() {
     <>
     <ThemeProvider theme={theme}>
       <Header />
-      <Play />
       <GlobalCSS />
     </ThemeProvider> 
     </>

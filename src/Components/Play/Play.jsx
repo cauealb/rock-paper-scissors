@@ -2,8 +2,16 @@ import { StyledSectionPrincipal, StyledBasePlay, StyledOption, RockMachine, Pape
 import { Scissors, Scroll } from 'phosphor-react'
 import rockSecound from '../../assets/iconRockSecound.svg'
 import rockPrincipal from '../../assets/iconRockPrincipal.svg'
+import { useState } from "react"
 
 export function Play() {
+    // Rock = 0
+    // Paper = 1
+    // Scissors
+    
+    const [isClick, setIsClick] = useState(-1)
+ 
+    console.log(isClick)
     return (
         <>
             <StyledSectionPrincipal>
@@ -30,15 +38,21 @@ export function Play() {
                     <StyledOptionDiv>
                         <StyledOptionMe>
                             <p>Rock</p>
-                            <RockMe><img src={rockPrincipal} width={50}/></RockMe>
+                            <RockMe onClick={() => {
+                                setIsClick(0)
+                            }}><img src={rockPrincipal} width={50}/></RockMe>
                         </StyledOptionMe>
                         <StyledOptionMe>
                             <p>Paper</p>
-                            <PaperMe><Scroll size={50} /></PaperMe>
+                            <PaperMe onClick={() => {
+                                setIsClick(1)
+                            }}><Scroll size={50} /></PaperMe>
                         </StyledOptionMe>
                         <StyledOptionMe>
                             <p>Scissors</p>
-                            <SciossorsMe><Scissors size={50} /></SciossorsMe>
+                            <SciossorsMe onClick={() => {
+                                setIsClick(2)
+                            }}><Scissors size={50} /></SciossorsMe>
                         </StyledOptionMe>
                     </StyledOptionDiv>
                 </StyledBasePlay>
