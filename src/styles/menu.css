@@ -32,6 +32,11 @@
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 4px #a7a7a7;
+    transition: all 0.2s linear;
+}
+
+.cta:hover {
+    box-shadow: 0 6px 4px #a7a7a7;
 }
 
 .cta p {
