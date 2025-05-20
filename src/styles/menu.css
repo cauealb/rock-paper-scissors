@@ -1,5 +1,10 @@
 #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    gap: 1em;
 }
 
 #menu h1 {
@@ -25,7 +30,6 @@
     border: none;
     outline: none;
     border-radius: 8px;
-    /* padding-inline: 1em; */
     cursor: pointer;
     box-shadow: 0 4px 4px #a7a7a7;
 }
