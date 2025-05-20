@@ -1,6 +1,4 @@
 #menu {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -23,7 +21,6 @@
 }
 
 .cta {
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-btn);
