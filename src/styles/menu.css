@@ -25,6 +25,15 @@
     border: none;
     outline: none;
     border-radius: 8px;
-    padding-inline: 1em;
+    /* padding-inline: 1em; */
+    cursor: pointer;
+    box-shadow: 0 4px 4px #a7a7a7;
 }
 
+.cta p {
+    font-size: 4em;
+    font-family: var(--font-Jersey25);
+    text-transform: uppercase;
+    color: var(--color-blue);
+    padding-inline: 0.15em;
+}
