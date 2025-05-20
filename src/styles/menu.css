@@ -16,3 +16,15 @@
 .name_game:last-child {
     color: var(--color-red);
 }
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-btn);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding-inline: 1em;
+}
+
