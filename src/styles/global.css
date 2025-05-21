@@ -28,3 +28,11 @@ body {
     font-family: var(--font-Jersey25);
     color: var(--color-message-p);
 }
+
+.blue {
+    color: var(--color-blue);
+}
+
+.red {
+    color: var(--color-red);
+}

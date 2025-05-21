@@ -12,14 +12,6 @@
     text-transform: uppercase;
 }
 
-.name_game:first-child {
-    color: var(--color-blue);
-}
-
-.name_game:last-child {
-    color: var(--color-red);
-}
-
 .cta {
     justify-content: center;
     align-items: center;
