@@ -1,5 +1,5 @@
 #game {
-    padding-block: 4em;
+    padding-block: 1em;
     justify-content: center;
 }
 
@@ -15,4 +15,10 @@
 
 .container_IA p {
     font-size: 1.5em;
+}
+
+.VS {
+    font-family: var(--font-Jersey25);
+    font-size: 5em;
+    padding-block: 0.20em;
 }
