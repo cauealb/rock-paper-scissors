@@ -32,6 +32,9 @@
 }
 
 .options li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     padding: 1.7em 0.60em;
     background-color: var(--color-message-p);
