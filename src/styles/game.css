@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-#scoreboard > p {
+#scoreboard > p, #score {
     font-family: var(--font-Jersey25);
     font-size: 2em;
 }
@@ -14,5 +14,13 @@
 }
 
 #scoreboard > p:last-child {
+    color: var(--color-blue);
+}
+
+#score p:first-child {
+    color: var(--color-red);
+}
+
+#score p:last-child {
     color: var(--color-blue);
 }
