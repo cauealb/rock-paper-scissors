@@ -1,0 +1,18 @@
+#game {
+    padding-block: 4em;
+    justify-content: center;
+}
+
+.container_IA {
+    justify-content: center;
+    align-items: center;
+}
+
+.container_IA img{
+    width: 12em;
+    margin-inline: auto;
+}
+
+.container_IA p {
+    font-size: 1.5em;
+}
