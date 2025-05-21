@@ -2,6 +2,7 @@
     --color-blue: #14A5FF;
     --color-red: #FD6565;
     --color-btn: #d2d2d2a9;
+    --color-message-p: #DBDBDB;
 
     --font-Jersey25: "Jersey 25", sans-serif;
 }
@@ -13,12 +14,17 @@
 }
 
 /* .inital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 } */
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 1.5em;
+}
+
+.message_choosing {
+    font-family: var(--font-Jersey25);
+    color: var(--color-message-p);
 }
