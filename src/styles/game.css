@@ -29,7 +29,7 @@
 .options ul {
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5em;
+    gap: 2.5em;
 }
 
 .options li {
@@ -39,4 +39,9 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 4px rgb(146, 146, 146);
+    transition: all 0.1s linear
+}
+
+.options li:hover {
+    transform: translateY(-7px);
 }
