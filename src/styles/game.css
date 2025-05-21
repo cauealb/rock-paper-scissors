@@ -1,0 +1,18 @@
+#scoreboard {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#scoreboard > p {
+    font-family: var(--font-Jersey25);
+    font-size: 2em;
+}
+
+#scoreboard > p:first-child {
+    color: var(--color-red);
+}
+
+#scoreboard > p:last-child {
+    color: var(--color-blue);
+}
