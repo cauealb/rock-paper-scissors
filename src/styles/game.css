@@ -23,13 +23,20 @@
 .options {
     justify-content: center;
     align-items: center;
+    /* background-color: yellow; */
 }
 
 .options ul {
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
 }
 
 .options li {
     list-style: none;
+    padding: 1.7em 0.60em;
+    background-color: var(--color-message-p);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgb(146, 146, 146);
 }
