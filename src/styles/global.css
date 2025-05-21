@@ -12,9 +12,9 @@
     box-sizing: border-box;
 }
 
-html, body {
+/* .inital {
     min-height: 100vh;
-}
+} */
 
 body {
     display: flex;
