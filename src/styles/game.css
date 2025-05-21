@@ -19,3 +19,17 @@
     padding-block: 0.20em;
     justify-self: center;
 }
+
+.options {
+    justify-content: center;
+    align-items: center;
+}
+
+.options ul {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.options li {
+    list-style: none;
+}
