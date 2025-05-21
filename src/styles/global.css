@@ -27,6 +27,7 @@ body {
 .message_choosing {
     font-family: var(--font-Jersey25);
     color: var(--color-message-p);
+    font-size: 1.5em;
 }
 
 .blue {
