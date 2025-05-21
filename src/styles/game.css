@@ -21,9 +21,8 @@
 }
 
 .options {
-    justify-content: center;
+    justify-items: center;
     align-items: center;
-    /* background-color: yellow; */
 }
 
 .options ul {
