@@ -13,12 +13,16 @@
     box-sizing: border-box;
 }
 
-/* .inital {
+.inital {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-} */
+}
+
+.initial_game {
+    display: none;
+}
 
 body {
     padding: 1.5em;
