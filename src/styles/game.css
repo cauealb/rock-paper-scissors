@@ -48,3 +48,11 @@
 .options li:hover {
     transform: translateY(-7px);
 }
+
+#buttons {
+    width: fit-content;
+}
+
+#buttons p {
+    font-size: 3em;
+}
