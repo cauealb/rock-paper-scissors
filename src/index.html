@@ -31,26 +31,35 @@
         <p>You</p>
     </header>   
 
-    <div id="game" class="grid">
-        <div class="container_IA grid">
-            <img src="images/machine.png" alt="Imagem de uma máquina">
-            <p class="message_choosing">AI is choosing your option</p>
+        <div id="game" class="grid">
+            <div class="container_IA grid">
+                <img src="images/machine.png" alt="Imagem de uma máquina">
+                <p class="message_choosing">AI is choosing your option</p>
+            </div>
+            <div class="VS">
+                <!-- <h2>You win</h2> -->
+                <h1>
+                    <span class="red">V</span><span class="blue">S</span>
+                </h1>
+            </div>
+            <div class="options grid gap-32">
+                <p class="message_choosing">Choose your option</p>
+                <ul class="grid">
+                    <li><p>Rock</p></li>
+                    <li><p>Paper</p></li>
+                    <li><p>Scissors</p></li>
+                </ul>
+            </div>
         </div>
-        <div class="VS">
-            <!-- <h2>You win</h2> -->
-            <h1>
-                <span class="red">V</span><span class="blue">S</span>
-            </h1>
+        <div>
+            <button class="cta">
+                <p class="red">Reset</p>
+            </button>
+            <button class="cta">
+                <p>Again</p>
+            </button>
         </div>
-        <div class="options grid gap-32">
-            <p class="message_choosing">Choose your option</p>
-            <ul class="grid">
-                <li><p>Rock</p></li>
-                <li><p>Paper</p></li>
-                <li><p>Scissors</p></li>
-            </ul>
-        </div>
-    </div>
+
     </div>
     <script src="scripts.js"></script>
 </body>
