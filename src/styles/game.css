@@ -1,0 +1,49 @@
+#game {
+    padding-block: 1em;
+    justify-content: center;
+}
+
+.container_IA {
+    justify-content: center;
+    align-items: center;
+}
+
+.container_IA img{
+    width: 12em;
+    margin-inline: auto;
+}
+
+.VS {
+    font-family: var(--font-Jersey25);
+    font-size: 5em;
+    padding-block: 0.20em;
+    justify-self: center;
+}
+
+.options {
+    justify-items: center;
+    align-items: center;
+}
+
+.options ul {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em;
+}
+
+.options li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 1.7em 0.60em;
+    background-color: var(--color-message-p);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgb(146, 146, 146);
+    transition: all 0.1s linear
+}
+
+.options li:hover {
+    transform: translateY(-7px);
+}

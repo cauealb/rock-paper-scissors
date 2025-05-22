@@ -1,0 +1,43 @@
+:root {
+    --color-blue: #14A5FF;
+    --color-red: #FD6565;
+    --color-btn: #d2d2d2a9;
+    --color-message-p: #DBDBDB;
+
+    --font-Jersey25: "Jersey 25", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.initial_game {
+    display: none;
+}
+
+body {
+    padding: 1.5em;
+}
+
+.message_choosing {
+    font-family: var(--font-Jersey25);
+    color: var(--color-message-p);
+    font-size: 1.5em;
+}
+
+.blue {
+    color: var(--color-blue);
+}
+
+.red {
+    color: var(--color-red);
+}

@@ -2,11 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
     <title>Rock Paper Scissors</title>
 </head>
-<body>
-    
+<body class="inital">
+    <div id="menu" class="flex flex-col">
+        <h1><span class="blue">Rock paper</span> <span class="red">and scissors</span></h1>
+        <button class="cta flex">
+            <img src="images/play_arrow_filled.png" alt="Botão de Play">
+            <p>Play</p>
+        </button>
+    </div>
+
+    <div class="initial_game">
+        <header id="scoreboard" class="flex">
+        <p>IA</p>
+        <div id="score" class="flex">
+            <!-- Pontos IA -->
+             <p>0</p>
+             <span>-</span>
+             <!-- Pontos You -->
+             <p>0</p>
+        </div>
+        <p>You</p>
+    </header>   
+
+    <div id="game" class="grid">
+        <div class="container_IA grid">
+            <img src="images/machine.png" alt="Imagem de uma máquina">
+            <p class="message_choosing">AI is choosing your option</p>
+        </div>
+        <div class="VS">
+            <h1>
+                <span class="red">V</span><span class="blue">S</span>
+            </h1>
+        </div>
+        <div class="options grid gap-32">
+            <p class="message_choosing">Choose your option</p>
+            <ul class="grid">
+                <li><p>Rock</p></li>
+                <li><p>Paper</p></li>
+                <li><p>Scissors</p></li>
+            </ul>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
