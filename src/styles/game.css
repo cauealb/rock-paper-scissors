@@ -50,9 +50,11 @@
 }
 
 #buttons {
+    margin-block: 2em;
+    margin-inline: auto;
     width: fit-content;
 }
 
 #buttons p {
-    font-size: 3em;
+    font-size: 3.2em;
 }
