@@ -46,9 +46,19 @@ body {
 @media screen and (min-width: 55em) {
     #game {
         display: grid;
+        align-items: end;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
         margin-inline: auto;
         background-color: yellow;
+    }
+
+    .options {
+        align-content: center;
+        margin-bottom: 0.50em;
+    }
+
+    .options > .message_choosing {
+        background-color: black;
     }
 }
