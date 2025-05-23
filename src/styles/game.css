@@ -20,6 +20,7 @@
     justify-self: center;
 }
 
+
 .options {
     justify-items: center;
     align-items: center;
@@ -46,4 +47,18 @@
 
 .options li:hover {
     transform: translateY(-7px);
+}
+
+#buttons {
+    margin-block: 2em;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+#buttons  .cta {
+    padding: 0.30em;
+}
+
+#buttons p {
+    font-size: 3em;
 }

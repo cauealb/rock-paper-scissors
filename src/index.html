@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <title>Rock Paper Scissors</title>
 </head>
-<body id="body" class="inital">
+ <body id="body" class="inital">
     <div id="menu" class="flex flex-col">
         <h1><span class="blue">Rock paper</span> <span class="red">and scissors</span></h1>
         <button id="open" class="cta flex">
@@ -20,7 +20,7 @@
 
     <div id="main" class="initial_game">
         <header id="scoreboard" class="flex">
-        <p>IA</p>
+        <p>AI</p>
         <div id="score" class="flex">
             <!-- Pontos IA -->
              <p>0</p>
@@ -31,25 +31,45 @@
         <p>You</p>
     </header>   
 
-    <div id="game" class="grid">
-        <div class="container_IA grid">
-            <img src="images/machine.png" alt="Imagem de uma máquina">
-            <p class="message_choosing">AI is choosing your option</p>
+        <div id="game" class="grid">
+            <div class="container_IA grid">
+                <img src="images/machine.png" alt="Imagem de uma máquina">
+                <p class="message_choosing">AI is choosing your option</p>
+            </div>
+            <div class="options grid gap-32 none">
+                <p class="message_choosing">Choose your option</p>
+                <ul class="grid">
+                    <li><p>Rock</p></li>
+                    <li><p>Paper</p></li>
+                    <li><p>Scissors</p></li>
+                </ul>
+            </div>
+            <div class="VS">
+                <!-- <h2>You win</h2> -->
+                <h1>
+                    <span class="red">V</span><span class="blue">S</span>
+                </h1>
+            </div>
+            <div class="options grid gap-32">
+                <p class="message_choosing">Choose your option</p>
+                <ul class="grid">
+                    <li><p>Rock</p></li>
+                    <li><p>Paper</p></li>
+                    <li><p>Scissors</p></li>
+                </ul>
+            </div>
         </div>
-        <div class="VS">
-            <h1>
-                <span class="red">V</span><span class="blue">S</span>
-            </h1>
+        <div id="buttons" class="flex gap-32">
+            <button class="cta flex">
+                <img src="images/reset.png" alt="icone de resetar jogo">
+                <p class="red">Reset</p>
+            </button>
+            <button class="cta flex">
+                <img src="images/again.png" alt="Icone de continuar o jogo">
+                <p>Again</p>
+            </button>
         </div>
-        <div class="options grid gap-32">
-            <p class="message_choosing">Choose your option</p>
-            <ul class="grid">
-                <li><p>Rock</p></li>
-                <li><p>Paper</p></li>
-                <li><p>Scissors</p></li>
-            </ul>
-        </div>
-    </div>
+
     </div>
     <script src="scripts.js"></script>
 </body>

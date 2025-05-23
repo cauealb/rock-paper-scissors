@@ -41,3 +41,20 @@ body {
 .red {
     color: var(--color-red);
 }
+
+/* Responsive */
+@media screen and (min-width: 55em) {
+    #game {
+        display: grid;
+        align-items: end;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin-inline: auto;
+        padding-block: 7em;
+    }
+
+    .options {
+        align-content: center;
+        margin-bottom: 0.50em;
+    }
+}
