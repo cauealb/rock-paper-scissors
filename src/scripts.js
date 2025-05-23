@@ -21,7 +21,18 @@ liYou.forEach(item => {
     item.addEventListener("click", () => {
         messageChoosingYou.textContent = `You choose ${item.textContent}`
         containerAI.classList.add("none")
-        console.log(newContainerAI)
+        item.click = true
+        console.log(item.click)
         newContainerAI.classList.remove("none")
+        selectOptions()
     })
 })
+
+// Funções
+function selectOptions() {
+    for(let i = 0; i < liYou.length; i++) {
+        if(liYou[i].click) {
+            console.log(liYou[i])
+        }
+    }
+}
