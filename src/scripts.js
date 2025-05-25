@@ -3,7 +3,8 @@ const openBtn = document.getElementById("open");
 const menu = document.getElementById("menu")
 const body = document.getElementById("body")
 const main = document.getElementById("main")
-const liYou = document.querySelectorAll(".options li")
+const liYou = document.querySelectorAll("#optionsYou li")
+const liIA = document.querySelectorAll("#optionsAI li")
 const messageChoosingYou = document.getElementById("messageYou")
 const containerAI = document.querySelector(".container_IA")
 const newContainerAI = document.getElementById("optionsAI")
@@ -35,8 +36,11 @@ liYou.forEach(item => {
         item.click = true
 
         newContainerAI.classList.remove("none")
-        selectOptions();
+        selectOptions(liYou);
+
         chooseAI = chooseOptionAI();
+
+        selectOptions(liIA, chooseAI)
 
         const finalResult = result(chooseAI, chooseYou)
 
@@ -61,10 +65,10 @@ againBtn.addEventListener("click", () => {
 })
 
 // Funções que pega o valor que foi selecionado
-function selectOptions() {
-    for(let i = 0; i < liYou.length; i++) {
-        if(liYou[i].click) {
-            // console.log(liYou[i])
+function selectOptions(options, chooseIA = 0) {
+    for(let i = 0; i < options.length; i++) {
+        if(options[i].click) {
+            console.log(options[i] .textContent)
         }
     }
 }
