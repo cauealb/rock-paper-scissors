@@ -42,14 +42,12 @@ liYou.forEach(item => {
         chooseYou = Number(e.target.dataset.option)
         selectOptions(liYou, chooseYou);
         chooseAI = chooseOptionAI();
-        messageChoosingAI.textContent = `You choose ${item.textContent}`
         selectOptions(liIA, chooseAI)
 
         let finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
         resultDesktop.textContent = finalResult
-        resultDesktop.classList.remove("none")
         resultDesktop.style = "opacity: 1"
     })
 })
@@ -86,7 +84,7 @@ function selectOptions(options, choose) {
 function resetMessage() {
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
-    messageChoosingYou.textContent = `Choose your oclsption`
+    messageChoosingYou.textContent = `Choose your option`
     messageChoosingAI.textContent = `Choose your option`
     resultDesktop.style = "opacity: 0"
 
