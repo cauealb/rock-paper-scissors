@@ -81,7 +81,7 @@ function selectOptions(options, choose) {
 function resetMessage() {
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
-    messageChoosingYou.textContent = `Choose your option`
+    messageChoosingYou.textContent = `Choose your oclsption`
     messageChoosingAI.textContent = `Choose your option`
 
     for(let i = 0; i < liYou.length; i++) {
@@ -113,8 +113,15 @@ function result(optionAI, optionYou) {
     } else if (optionAI === 1 && optionYou === 2) {
         scoreYou++
         return "You Win!"
-    } else {
+    } else if (optionAI === 2 && optionYou === 1) {
         scoreAI++
         return "AI Win!"
+    } else if(optionAI === 0 && optionYou === 2) {
+        scoreAI++
+        return "AI Win!"
+    } else if (optionAI === 2 && optionYou === 0) {
+        scoreAI++
+        return "You Win!"
+    } else {
+        return "Draw!"
     }
-}
