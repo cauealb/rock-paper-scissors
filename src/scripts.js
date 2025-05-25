@@ -6,6 +6,7 @@ const main = document.getElementById("main")
 const liYou = document.querySelectorAll("#optionsYou li")
 const liIA = document.querySelectorAll("#optionsAI li")
 const messageChoosingYou = document.getElementById("messageYou")
+const messageChoosingAI = document.getElementById("messageAI")
 const containerAI = document.querySelector(".container_IA")
 const newContainerAI = document.getElementById("optionsAI")
 const content = document.getElementsByClassName("content")
@@ -32,19 +33,16 @@ openBtn.onclick = () => {
 liYou.forEach(item => {
     item.addEventListener("click", (e) => {
         messageChoosingYou.textContent = `You choose ${item.textContent}`
-        // console.log(liYou)
         containerAI.classList.add("none")
-        item.click = true
-
         newContainerAI.classList.remove("none")
+
+        // Selecionando opções
+        console.log(e.target)
         selectOptions(liYou);
-
         chooseAI = chooseOptionAI();
-
         selectOptions(liIA, chooseAI)
 
         const finalResult = result(chooseAI, chooseYou)
-
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
     })
@@ -74,8 +72,7 @@ function selectOptions(options, IAChoose = -1) {
             }
         }
     } else { /* Escopo IA */
-        console.log(IAChoose)
-        console.log(options[IAChoose].textContent)
+        messageChoosingAI.textContent = `You choose ${options[IAChoose].textContent}`  
     }
 }
 
