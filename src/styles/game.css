@@ -21,17 +21,15 @@
     align-items: center;
 }
 
-.result-mobile {
+#result-mobile {
     /* opacity: 0; */
-    display: none;
     font-family: var(--font-Jersey25);
     font-size: 2em;
     text-align: center;
     padding-block: 0.10em;
 }
 
-.result-destop {
-    display: none;
+#result-desktop {
     font-size: 0.40em;
 }
 

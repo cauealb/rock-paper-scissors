@@ -14,6 +14,8 @@ const scoreYouHTML = document.querySelector("#score > p:first-child")
 const scoreAIHTML = document.querySelector("#score > p:last-child")
 const resetBtn = document.getElementById("reset")
 const againBtn = document.getElementById("again")
+const resultDesktop = document.getElementById("result-desktop")
+const resultMobile = document.getElementById("result-mobile")
 
 // Escolhas
 let chooseYou
@@ -43,9 +45,11 @@ liYou.forEach(item => {
         messageChoosingAI.textContent = `You choose ${item.textContent}`
         selectOptions(liIA, chooseAI)
 
-        const finalResult = result(chooseAI, chooseYou)
+        let finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
+        resultDesktop.textContent = finalResult
+        resultDesktop.classList.remove("none")
     })
 })
 
@@ -105,7 +109,7 @@ function chooseOptionAI() {
 // 2 - Sciossors
 function result(optionAI, optionYou) {
     if(optionAI === 0 && optionYou === 1) {
-        scoreYou++
+        scoreAI++
         return "You Win!"
     } else if(optionAI === 1 && optionYou === 0) {
         scoreAI++
