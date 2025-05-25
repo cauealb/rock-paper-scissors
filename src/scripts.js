@@ -54,8 +54,10 @@ function selectOptions() {
 
 // Função que retorna a opção da IA
 function chooseOptionAI() {
-    chooseAI = Math.random(0, 2)
+    chooseAI = Math.floor(Math.random(0, 2))
 
+
+    
     return chooseAI;
 }
 
