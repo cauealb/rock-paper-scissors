@@ -22,6 +22,7 @@
 }
 
 .result-mobile {
+    opacity: 0;
     font-family: var(--font-Jersey25);
     font-size: 2em;
     text-align: center;
