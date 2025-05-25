@@ -16,8 +16,8 @@ let chooseYou
 let chooseAI
 
 // Variáveis que controlam o score
-let scoreYou
-let scoreAI
+let scoreYou = 0
+let scoreAI = 0
 
 // Eventos
 openBtn.onclick = () => {
@@ -39,7 +39,7 @@ liYou.forEach(item => {
         const finalResult = result(chooseAI, chooseYou)
 
         scoreYouHTML.textContent = scoreYou
-        scoreAIHTML.textContent - scoreAI
+        scoreAIHTML.textContent = scoreAI
     })
 })
 
