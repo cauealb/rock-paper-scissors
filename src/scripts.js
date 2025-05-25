@@ -50,6 +50,7 @@ liYou.forEach(item => {
         scoreAIHTML.textContent = scoreAI
         resultDesktop.textContent = finalResult
         resultDesktop.classList.remove("none")
+        resultDesktop.style = "opacity: 1"
     })
 })
 
@@ -87,6 +88,7 @@ function resetMessage() {
     newContainerAI.classList.add("none")
     messageChoosingYou.textContent = `Choose your oclsption`
     messageChoosingAI.textContent = `Choose your option`
+    resultDesktop.style = "opacity: 0"
 
     for(let i = 0; i < liYou.length; i++) {
         liYou[i].classList.remove("option-not-select")

@@ -19,6 +19,7 @@
     padding-block: 0.20em;
     justify-content: center;
     align-items: center;
+    gap: 0.40em;
 }
 
 #result-mobile {
