@@ -66,6 +66,9 @@
 /* Botões não clicados */
 .option-not-select {
     opacity: 0.5;
+}
+
+.option-not-select:hover {
     cursor: not-allowed;
 }
 

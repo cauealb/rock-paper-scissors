@@ -65,21 +65,12 @@ againBtn.addEventListener("click", () => {
 
 // Funções que pega o valor que foi selecionado
 function selectOptions(options, choose) {
-    // if(cho === -1) {
-    //     for(let i = 0; i < options.length; i++) {
-    //         if(options[i]) {
-                
-    //         }
-    //     }
-    // } else { /* Escopo IA */
-    //     messageChoosingAI.textContent = `AI choose ${options[IAChoose].textContent}`  
-    // }
-
     // Estilizando opções
     options[choose].classList.add("option-select")
     for(let i = 0; i < options.length; i++) {
         if(!options[i].classList.contains("option-select")) {
             options[i].classList.add("option-not-select")
+            console.log(options[i])
         }
     }
 }

@@ -51,7 +51,6 @@ body {
         width: 100%;
         margin-inline: auto;
         padding-block: 7em;
-        cursor: not-allowed;
     }
 
     .options {
