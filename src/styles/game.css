@@ -17,7 +17,12 @@
     font-family: var(--font-Jersey25);
     font-size: 5em;
     padding-block: 0.20em;
-    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    font-size: 0.40em;
 }
 
 
