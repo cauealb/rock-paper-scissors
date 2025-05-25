@@ -27,11 +27,14 @@ liYou.forEach(item => {
         item.click = true
 
         newContainerAI.classList.remove("none")
-        selectOptions()
+        selectOptions();
+        chooseOptionAI();
+
+
     })
 })
 
-// Funções
+// Funções que pega o valor que foi selecionado
 function selectOptions() {
     for(let i = 0; i < liYou.length; i++) {
         if(liYou[i].click) {
@@ -45,4 +48,20 @@ function chooseOptionAI() {
     chooseAI = Math.random(0, 2)
 
     return chooseAI;
+}
+
+// Função que retorna o resultado
+// 0 - Rock
+// 1 - Paper
+// 2 - Sciossors
+function result(optionAI, optionYou) {
+    if(optionAI === 0 && optionYou === 1) {
+        return "You Win!"
+    } else if(optionAI === 1 && optionYou === 0) {
+        return "AI Win!"
+    } else if (optionAI === 1 && optionYou === 2) {
+        return "You Win!"
+    } else {
+        return "AI Win!"
+    }
 }
