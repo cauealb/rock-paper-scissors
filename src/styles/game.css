@@ -68,6 +68,11 @@
     opacity: 0.5;
 }
 
+/* Botão que foi clicado */
+.option-select {
+    transform: translateY(-7px);
+}
+
 #buttons {
     margin-block: 2em;
     margin-inline: auto;
