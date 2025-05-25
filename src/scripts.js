@@ -37,11 +37,10 @@ liYou.forEach(item => {
         newContainerAI.classList.remove("none")
 
         // Selecionando opções
-        console.log(e.target.dataset.option)
         chooseYou = Number(e.target.dataset.option)
-        selectOptions(liYou);
+        selectOptions(liYou, chooseYou);
         chooseAI = chooseOptionAI();
-        selectOptions(liIA)
+        selectOptions(liIA, chooseAI)
 
         const finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
@@ -65,15 +64,23 @@ againBtn.addEventListener("click", () => {
 })
 
 // Funções que pega o valor que foi selecionado
-function selectOptions(options, IAChoose = -1) {
-    if(IAChoose === -1) {
-        for(let i = 0; i < options.length; i++) {
-            if(options[i]) {
+function selectOptions(options, choose) {
+    // if(cho === -1) {
+    //     for(let i = 0; i < options.length; i++) {
+    //         if(options[i]) {
                 
-            }
+    //         }
+    //     }
+    // } else { /* Escopo IA */
+    //     messageChoosingAI.textContent = `AI choose ${options[IAChoose].textContent}`  
+    // }
+
+    // Estilizando opções
+    options[choose].classList.add("option-select")
+    for(let i = 0; i < options.length; i++) {
+        if(!options[i].classList.contains("option-select")) {
+            options[i].classList.add("option-not-select")
         }
-    } else { /* Escopo IA */
-        messageChoosingAI.textContent = `AI choose ${options[IAChoose].textContent}`  
     }
 }
 

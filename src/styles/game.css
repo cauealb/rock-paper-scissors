@@ -66,6 +66,7 @@
 /* Botões não clicados */
 .option-not-select {
     opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Botão que foi clicado */
