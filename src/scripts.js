@@ -86,8 +86,10 @@ function resetMessage() {
 
     for(let i = 0; i < liYou.length; i++) {
         liYou[i].classList.remove("option-not-select")
-        if(liYou[i].classList.contains("option-select")) {
+        liIA[i].classList.remove("option-not-select")
+        if(liYou[i].classList.contains("option-select") || liIA[i].classList.contains("option-select")) {
             liYou[i].classList.remove("option-select")
+            liIA[i].classList.remove("option-select")
         }
     }
 }
