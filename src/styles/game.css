@@ -21,10 +21,17 @@
     align-items: center;
 }
 
-.result {
-    font-size: 0.40em;
+.result-mobile {
+    font-family: var(--font-Jersey25);
+    font-size: 2em;
+    text-align: center;
+    padding-block: 0.30em;
 }
 
+.result-destop {
+    display: none;
+    font-size: 0.40em;
+}
 
 .options {
     justify-items: center;
