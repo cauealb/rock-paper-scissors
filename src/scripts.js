@@ -9,6 +9,9 @@ const containerAI = document.querySelector(".container_IA")
 const newContainerAI = document.getElementById("optionsAI")
 const content = document.getElementsByClassName("content")
 
+// Escolhas
+let chooseYou
+let chooseAI
 
 // Eventos
 openBtn.onclick = () => {
@@ -22,7 +25,7 @@ liYou.forEach(item => {
         messageChoosingYou.textContent = `You choose ${item.textContent}`
         containerAI.classList.add("none")
         item.click = true
-        console.log(item.click)
+
         newContainerAI.classList.remove("none")
         selectOptions()
     })
@@ -35,4 +38,11 @@ function selectOptions() {
             console.log(liYou[i])
         }
     }
+}
+
+// Função que retorna a opção da IA
+function chooseOptionAI() {
+    chooseAI = Math.random(0, 2)
+
+    return chooseAI;
 }
