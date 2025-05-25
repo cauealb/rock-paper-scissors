@@ -125,3 +125,4 @@ function result(optionAI, optionYou) {
     } else {
         return "Draw!"
     }
+}
