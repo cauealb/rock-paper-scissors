@@ -36,7 +36,7 @@ liYou.forEach(item => {
 
         newContainerAI.classList.remove("none")
         selectOptions();
-        chooseOptionAI();
+        chooseAI = chooseOptionAI();
 
         const finalResult = result(chooseAI, chooseYou)
 
@@ -71,11 +71,7 @@ function selectOptions() {
 
 // Função que retorna a opção da IA
 function chooseOptionAI() {
-    chooseAI = Math.floor(Math.random() * 3)
-
-    console.log(chooseAI)
-    
-    return chooseAI;
+    return Math.floor(Math.random() * 3)
 }
 
 // Função que retorna o resultado
