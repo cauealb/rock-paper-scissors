@@ -13,6 +13,10 @@ const content = document.getElementsByClassName("content")
 let chooseYou
 let chooseAI
 
+// Variáveis que controlam o score
+let scoreYou
+let scoreAI
+
 // Eventos
 openBtn.onclick = () => {
     menu.classList.toggle("none");
@@ -30,7 +34,7 @@ liYou.forEach(item => {
         selectOptions();
         chooseOptionAI();
 
-
+        const finalResult = result(chooseAI, chooseYou)
     })
 })
 
@@ -56,12 +60,16 @@ function chooseOptionAI() {
 // 2 - Sciossors
 function result(optionAI, optionYou) {
     if(optionAI === 0 && optionYou === 1) {
+        scoreYou++
         return "You Win!"
     } else if(optionAI === 1 && optionYou === 0) {
+        scoreAI++
         return "AI Win!"
     } else if (optionAI === 1 && optionYou === 2) {
+        scoreYou++
         return "You Win!"
     } else {
+        scoreAI
         return "AI Win!"
     }
 }
