@@ -11,6 +11,7 @@ const content = document.getElementsByClassName("content")
 const scoreYouHTML = document.querySelector("#score > p:first-child")
 const scoreAIHTML = document.querySelector("#score > p:last-child")
 const resetBtn = document.getElementById("reset")
+const againBtn = document.getElementById("again")
 
 // Escolhas
 let chooseYou
@@ -50,6 +51,11 @@ resetBtn.addEventListener("click", () => {
     scoreYouHTML.textContent = scoreYou
     scoreAIHTML.textContent = scoreAI
 
+    containerAI.classList.remove("none")
+    newContainerAI.classList.add("none")
+})
+
+againBtn.addEventListener("click", () => {
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
 })
