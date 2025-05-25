@@ -64,16 +64,16 @@ againBtn.addEventListener("click", () => {
 function selectOptions() {
     for(let i = 0; i < liYou.length; i++) {
         if(liYou[i].click) {
-            console.log(liYou[i])
+            // console.log(liYou[i])
         }
     }
 }
 
 // Função que retorna a opção da IA
 function chooseOptionAI() {
-    chooseAI = Math.floor(Math.random(0, 2))
+    chooseAI = Math.floor(Math.random() * 3)
 
-
+    console.log(chooseAI)
     
     return chooseAI;
 }
