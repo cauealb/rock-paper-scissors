@@ -22,11 +22,12 @@
 }
 
 .result-mobile {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     font-family: var(--font-Jersey25);
     font-size: 2em;
     text-align: center;
-    padding-block: 0.30em;
+    padding-block: 0.10em;
 }
 
 .result-destop {
@@ -60,6 +61,11 @@
 
 .options li:hover {
     transform: translateY(-7px);
+}
+
+/* Botões não clicados */
+.option-not-select {
+    opacity: 0.5;
 }
 
 #buttons {
