@@ -37,10 +37,11 @@ liYou.forEach(item => {
         newContainerAI.classList.remove("none")
 
         // Selecionando opções
-        console.log(e.target)
+        console.log(e.target.dataset.option)
+        chooseYou = Number(e.target.dataset.option)
         selectOptions(liYou);
         chooseAI = chooseOptionAI();
-        selectOptions(liIA, chooseAI)
+        selectOptions(liIA)
 
         const finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
@@ -67,8 +68,8 @@ againBtn.addEventListener("click", () => {
 function selectOptions(options, IAChoose = -1) {
     if(IAChoose === -1) {
         for(let i = 0; i < options.length; i++) {
-            if(options[i].click) {
-                // console.log(options[i] .textContent)
+            if(options[i]) {
+                
             }
         }
     } else { /* Escopo IA */
