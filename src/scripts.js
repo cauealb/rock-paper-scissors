@@ -8,6 +8,8 @@ const messageChoosingYou = document.getElementById("messageYou")
 const containerAI = document.querySelector(".container_IA")
 const newContainerAI = document.getElementById("optionsAI")
 const content = document.getElementsByClassName("content")
+const scoreYouHTML = document.querySelector("#score > p:first-child")
+const scoreAIHTML = document.querySelector("#score > p:last-child")
 
 // Escolhas
 let chooseYou
@@ -35,6 +37,9 @@ liYou.forEach(item => {
         chooseOptionAI();
 
         const finalResult = result(chooseAI, chooseYou)
+
+        scoreYouHTML.textContent = scoreYou
+        scoreAIHTML.textContent - scoreAI
     })
 })
 
@@ -69,7 +74,7 @@ function result(optionAI, optionYou) {
         scoreYou++
         return "You Win!"
     } else {
-        scoreAI
+        scoreAI++
         return "AI Win!"
     }
 }
