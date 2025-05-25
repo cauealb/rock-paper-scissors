@@ -40,6 +40,7 @@ liYou.forEach(item => {
         chooseYou = Number(e.target.dataset.option)
         selectOptions(liYou, chooseYou);
         chooseAI = chooseOptionAI();
+        messageChoosingAI.textContent = `You choose ${item.textContent}`
         selectOptions(liIA, chooseAI)
 
         const finalResult = result(chooseAI, chooseYou)
@@ -56,11 +57,11 @@ resetBtn.addEventListener("click", () => {
 
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
+    resetMessage();
 })
 
 againBtn.addEventListener("click", () => {
-    containerAI.classList.remove("none")
-    newContainerAI.classList.add("none")
+    resetMessage();
 })
 
 // Funções que pega o valor que foi selecionado
@@ -71,6 +72,22 @@ function selectOptions(options, choose) {
         if(!options[i].classList.contains("option-select")) {
             options[i].classList.add("option-not-select")
             console.log(options[i])
+        } else {
+            messageChoosingAI.textContent = `AI choose ${options[i].textContent}`
+        }
+    }
+}
+
+function resetMessage() {
+    containerAI.classList.remove("none")
+    newContainerAI.classList.add("none")
+    messageChoosingYou.textContent = `Choose your option`
+    messageChoosingAI.textContent = `Choose your option`
+
+    for(let i = 0; i < liYou.length; i++) {
+        liYou[i].classList.remove("option-not-select")
+        if(liYou[i].classList.contains("option-select")) {
+            liYou[i].classList.remove("option-select")
         }
     }
 }
