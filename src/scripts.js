@@ -10,6 +10,7 @@ const newContainerAI = document.getElementById("optionsAI")
 const content = document.getElementsByClassName("content")
 const scoreYouHTML = document.querySelector("#score > p:first-child")
 const scoreAIHTML = document.querySelector("#score > p:last-child")
+const resetBtn = document.getElementById("reset")
 
 // Escolhas
 let chooseYou
@@ -41,6 +42,16 @@ liYou.forEach(item => {
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
     })
+})
+
+resetBtn.addEventListener("click", () => {
+    scoreYou = 0
+    scoreAI = 0
+    scoreYouHTML.textContent = scoreYou
+    scoreAIHTML.textContent = scoreAI
+
+    containerAI.classList.remove("none")
+    newContainerAI.classList.add("none")
 })
 
 // Funções que pega o valor que foi selecionado
