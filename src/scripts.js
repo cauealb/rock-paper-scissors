@@ -72,7 +72,7 @@ function selectOptions(options, IAChoose = -1) {
             }
         }
     } else { /* Escopo IA */
-        messageChoosingAI.textContent = `You choose ${options[IAChoose].textContent}`  
+        messageChoosingAI.textContent = `AI choose ${options[IAChoose].textContent}`  
     }
 }
 
