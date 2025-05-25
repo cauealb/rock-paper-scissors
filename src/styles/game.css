@@ -17,9 +17,23 @@
     font-family: var(--font-Jersey25);
     font-size: 5em;
     padding-block: 0.20em;
-    justify-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
+.result-mobile {
+    /* opacity: 0; */
+    display: none;
+    font-family: var(--font-Jersey25);
+    font-size: 2em;
+    text-align: center;
+    padding-block: 0.10em;
+}
+
+.result-destop {
+    display: none;
+    font-size: 0.40em;
+}
 
 .options {
     justify-items: center;
@@ -46,6 +60,16 @@
 }
 
 .options li:hover {
+    transform: translateY(-7px);
+}
+
+/* Botões não clicados */
+.option-not-select {
+    opacity: 0.5;
+}
+
+/* Botão que foi clicado */
+.option-select {
     transform: translateY(-7px);
 }
 

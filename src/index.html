@@ -22,16 +22,15 @@
         <header id="scoreboard" class="flex">
         <p>AI</p>
         <div id="score" class="flex">
-            <!-- Pontos IA -->
              <p>0</p>
              <span>-</span>
-             <!-- Pontos You -->
              <p>0</p>
         </div>
         <p>You</p>
     </header>   
 
         <div id="game" class="grid" >
+            <h2 class="result-mobile">You win!</h2>
             <div class="container_IA grid">
                 <img src="images/machine.png" alt="Imagem de uma máquina">
                 <p class="message_choosing">AI is choosing your option</p>
@@ -39,13 +38,13 @@
             <div id="optionsAI" class="options grid gap-32 none">
                 <p id="messageAI" class="message_choosing">Choose your option</p>
                 <ul class="grid">
-                    <li><p>Rock</p></li>
-                    <li><p>Paper</p></li>
-                    <li><p>Scissors</p></li>
+                    <li data-option="0"><p>Rock</p></li>
+                    <li data-option="1"><p>Paper</p></li>
+                    <li data-option="2"><p>Scissors</p></li>
                 </ul>
             </div>
-            <div class="VS">
-                <!-- <h2>You win</h2> -->
+            <div class="VS flex flex-col">
+                <h2 class="result-destop">You win!</h2>
                 <h1>
                     <span class="red">V</span><span class="blue">S</span>
                 </h1>
@@ -53,9 +52,9 @@
             <div id="optionsYou" class="options grid gap-32">
                 <p id="messageYou" class="message_choosing">Choose your option</p>
                 <ul class="grid">
-                    <li><p>Rock</p></li>
-                    <li><p>Paper</p></li>
-                    <li><p>Scissors</p></li>
+                    <li data-option="0"><p>Rock</p></li>
+                    <li data-option="1"><p>Paper</p></li>
+                    <li data-option="2"><p>Scissors</p></li>
                 </ul>
             </div>
         </div>
