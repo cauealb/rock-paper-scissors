@@ -30,8 +30,9 @@ openBtn.onclick = () => {
 }
 
 liYou.forEach(item => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
         messageChoosingYou.textContent = `You choose ${item.textContent}`
+        // console.log(liYou)
         containerAI.classList.add("none")
         item.click = true
 
@@ -65,11 +66,16 @@ againBtn.addEventListener("click", () => {
 })
 
 // Funções que pega o valor que foi selecionado
-function selectOptions(options, chooseIA = 0) {
-    for(let i = 0; i < options.length; i++) {
-        if(options[i].click) {
-            console.log(options[i] .textContent)
+function selectOptions(options, IAChoose = -1) {
+    if(IAChoose === -1) {
+        for(let i = 0; i < options.length; i++) {
+            if(options[i].click) {
+                // console.log(options[i] .textContent)
+            }
         }
+    } else { /* Escopo IA */
+        console.log(IAChoose)
+        console.log(options[IAChoose].textContent)
     }
 }
 
