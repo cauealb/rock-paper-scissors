@@ -47,6 +47,13 @@ liYou.forEach(item => {
         let finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
+
+        if(finalResult === "You Win!") {
+            resultDesktop.classList.add("blue")
+        } else if(finalResult === "AI Win!") {
+            resultDesktop.classList.add("red")
+        }
+
         resultDesktop.textContent = finalResult
         resultDesktop.style = "opacity: 1"
     })
