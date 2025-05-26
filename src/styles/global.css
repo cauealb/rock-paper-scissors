@@ -1,6 +1,7 @@
 :root {
     --color-blue: #14A5FF;
     --color-red: #FD6565;
+    --collor-draw: #fdc065;
     --color-btn: #d2d2d2a9;
     --color-message-p: #DBDBDB;
 
@@ -40,6 +41,10 @@ body {
 
 .red {
     color: var(--color-red);
+}
+
+.draw {
+    color: var(--collor-draw);
 }
 
 /* Responsive */

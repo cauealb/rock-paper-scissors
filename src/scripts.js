@@ -52,6 +52,8 @@ liYou.forEach(item => {
             resultDesktop.classList.add("blue")
         } else if(finalResult === "AI Win!") {
             resultDesktop.classList.add("red")
+        } else {
+            resultDesktop.classList.add("draw")
         }
 
         resultDesktop.textContent = finalResult
