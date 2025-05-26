@@ -62,4 +62,8 @@ body {
         align-content: center;
         margin-bottom: 0.50em;
     }
+
+    #optionsAI {
+        padding-block: 0;
+    }
 }
