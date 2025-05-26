@@ -48,6 +48,7 @@ liYou.forEach(item => {
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
 
+        resultDesktop.className = ""
         if(finalResult === "You Win!") {
             resultDesktop.classList.add("blue")
         } else if(finalResult === "AI Win!") {
