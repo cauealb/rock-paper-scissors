@@ -74,6 +74,10 @@
     transform: translateY(-7px);
 }
 
+#optionsAI {
+    padding-block: 3.6em;
+}
+
 #buttons {
     margin-block: 2em;
     margin-inline: auto;
