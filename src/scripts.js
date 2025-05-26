@@ -10,8 +10,8 @@ const messageChoosingAI = document.getElementById("messageAI")
 const containerAI = document.querySelector(".container_IA")
 const newContainerAI = document.getElementById("optionsAI")
 const content = document.getElementsByClassName("content")
-const scoreYouHTML = document.querySelector("#score > p:first-child")
-const scoreAIHTML = document.querySelector("#score > p:last-child")
+const scoreAIHTML = document.querySelector("#score > p:first-child")
+const scoreYouHTML = document.querySelector("#score > p:last-child")
 const resetBtn = document.getElementById("reset")
 const againBtn = document.getElementById("again")
 const resultDesktop = document.getElementById("result-desktop")
@@ -116,7 +116,7 @@ function chooseOptionAI() {
 // 2 - Sciossors
 function result(optionAI, optionYou) {
     if(optionAI === 0 && optionYou === 1) {
-        scoreAI++
+        scoreYou++
         return "You Win!"
     } else if(optionAI === 1 && optionYou === 0) {
         scoreAI++
@@ -131,7 +131,7 @@ function result(optionAI, optionYou) {
         scoreAI++
         return "AI Win!"
     } else if (optionAI === 2 && optionYou === 0) {
-        scoreAI++
+        scoreYou++
         return "You Win!"
     } else {
         return "Draw!"
