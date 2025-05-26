@@ -19,19 +19,19 @@
     padding-block: 0.20em;
     justify-content: center;
     align-items: center;
+    gap: 0.40em;
 }
 
-.result-mobile {
+#result-mobile {
     /* opacity: 0; */
-    display: none;
     font-family: var(--font-Jersey25);
     font-size: 2em;
     text-align: center;
     padding-block: 0.10em;
 }
 
-.result-destop {
-    display: none;
+#result-desktop {
+    opacity: 0;
     font-size: 0.40em;
 }
 
@@ -66,6 +66,7 @@
 /* Botões não clicados */
 .option-not-select {
     opacity: 0.5;
+    pointer-events: none;
 }
 
 /* Botão que foi clicado */

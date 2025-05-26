@@ -10,10 +10,12 @@ const messageChoosingAI = document.getElementById("messageAI")
 const containerAI = document.querySelector(".container_IA")
 const newContainerAI = document.getElementById("optionsAI")
 const content = document.getElementsByClassName("content")
-const scoreYouHTML = document.querySelector("#score > p:first-child")
-const scoreAIHTML = document.querySelector("#score > p:last-child")
+const scoreAIHTML = document.querySelector("#score > p:first-child")
+const scoreYouHTML = document.querySelector("#score > p:last-child")
 const resetBtn = document.getElementById("reset")
 const againBtn = document.getElementById("again")
+const resultDesktop = document.getElementById("result-desktop")
+const resultMobile = document.getElementById("result-mobile")
 
 // Escolhas
 let chooseYou
@@ -37,14 +39,23 @@ liYou.forEach(item => {
         newContainerAI.classList.remove("none")
 
         // Selecionando opções
-        console.log(e.target)
-        selectOptions(liYou);
+        chooseYou = Number(e.target.dataset.option)
+        selectOptions(liYou, chooseYou);
         chooseAI = chooseOptionAI();
         selectOptions(liIA, chooseAI)
 
-        const finalResult = result(chooseAI, chooseYou)
+        let finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
+
+        if(finalResult === "You Win!") {
+            resultDesktop.classList.add("blue")
+        } else if(finalResult === "AI Win!") {
+            resultDesktop.classList.add("red")
+        }
+
+        resultDesktop.textContent = finalResult
+        resultDesktop.style = "opacity: 1"
     })
 })
 
@@ -56,23 +67,41 @@ resetBtn.addEventListener("click", () => {
 
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
+    resetMessage();
 })
 
 againBtn.addEventListener("click", () => {
-    containerAI.classList.remove("none")
-    newContainerAI.classList.add("none")
+    resetMessage();
 })
 
 // Funções que pega o valor que foi selecionado
-function selectOptions(options, IAChoose = -1) {
-    if(IAChoose === -1) {
-        for(let i = 0; i < options.length; i++) {
-            if(options[i].click) {
-                // console.log(options[i] .textContent)
-            }
+function selectOptions(options, choose) {
+    // Estilizando opções
+    options[choose].classList.add("option-select")
+    for(let i = 0; i < options.length; i++) {
+        if(!options[i].classList.contains("option-select")) {
+            options[i].classList.add("option-not-select")
+            console.log(options[i])
+        } else {
+            messageChoosingAI.textContent = `AI choose ${options[i].textContent}`
         }
-    } else { /* Escopo IA */
-        messageChoosingAI.textContent = `AI choose ${options[IAChoose].textContent}`  
+    }
+}
+
+function resetMessage() {
+    containerAI.classList.remove("none")
+    newContainerAI.classList.add("none")
+    messageChoosingYou.textContent = `Choose your option`
+    messageChoosingAI.textContent = `Choose your option`
+    resultDesktop.style = "opacity: 0"
+
+    for(let i = 0; i < liYou.length; i++) {
+        liYou[i].classList.remove("option-not-select")
+        liIA[i].classList.remove("option-not-select")
+        if(liYou[i].classList.contains("option-select") || liIA[i].classList.contains("option-select")) {
+            liYou[i].classList.remove("option-select")
+            liIA[i].classList.remove("option-select")
+        }
     }
 }
 
@@ -95,8 +124,16 @@ function result(optionAI, optionYou) {
     } else if (optionAI === 1 && optionYou === 2) {
         scoreYou++
         return "You Win!"
-    } else {
+    } else if (optionAI === 2 && optionYou === 1) {
         scoreAI++
         return "AI Win!"
+    } else if(optionAI === 0 && optionYou === 2) {
+        scoreAI++
+        return "AI Win!"
+    } else if (optionAI === 2 && optionYou === 0) {
+        scoreYou++
+        return "You Win!"
+    } else {
+        return "Draw!"
     }
 }
