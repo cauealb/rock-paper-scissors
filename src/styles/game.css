@@ -1,5 +1,5 @@
 #game {
-    padding-block: 1em;
+    padding-block: 3em;
     justify-content: center;
 }
 
@@ -23,7 +23,6 @@
 }
 
 #result-mobile {
-    /* opacity: 0; */
     font-family: var(--font-Jersey25);
     font-size: 2em;
     text-align: center;
@@ -32,6 +31,8 @@
 
 #result-desktop {
     opacity: 0;
+    position: absolute;
+    top: 3em;
     font-size: 0.40em;
 }
 

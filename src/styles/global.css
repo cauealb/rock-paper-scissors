@@ -66,4 +66,8 @@ body {
     #optionsAI {
         padding-block: 0;
     }
+
+    #result-desktop {
+        position: initial;
+    }
 }
