@@ -61,8 +61,6 @@ resetBtn.addEventListener("click", () => {
     scoreYouHTML.textContent = scoreYou
     scoreAIHTML.textContent = scoreAI
 
-    containerAI.classList.remove("none")
-    newContainerAI.classList.add("none")
     resetMessage();
 })
 
@@ -72,7 +70,6 @@ againBtn.addEventListener("click", () => {
 
 // Funções que pega o valor que foi selecionado
 function selectOptions(options, choose) {
-    // Estilizando opções
     options[choose].classList.add("option-select")
     for(let i = 0; i < options.length; i++) {
         if(!options[i].classList.contains("option-select")) {
@@ -84,6 +81,7 @@ function selectOptions(options, choose) {
     }
 }
 
+// Função que reseta as menssagens
 function resetMessage() {
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
