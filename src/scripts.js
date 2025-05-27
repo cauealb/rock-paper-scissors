@@ -85,8 +85,7 @@ function selectOptions(options, choose) {
 function resetMessage() {
     containerAI.classList.remove("none")
     newContainerAI.classList.add("none")
-    messageChoosingYou.textContent = `Choose your option`
-    messageChoosingAI.textContent = `Choose your option`
+    messageChoosingYou.textContent; messageChoosingAI.textContent = `Choose your option`
     resultDesktop.style = "opacity: 0"
 
     for(let i = 0; i < liYou.length; i++) {
