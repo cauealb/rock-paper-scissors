@@ -25,6 +25,9 @@ let chooseAI
 let scoreYou = 0
 let scoreAI = 0
 
+// Variável que pega o resultado do jogo
+let finalResult
+
 // Eventos
 openBtn.onclick = () => {
     menu.classList.toggle("none");
@@ -44,21 +47,11 @@ liYou.forEach(item => {
         chooseAI = chooseOptionAI();
         selectOptions(liIA, chooseAI)
 
-        let finalResult = result(chooseAI, chooseYou)
+        finalResult = result(chooseAI, chooseYou)
         scoreYouHTML.textContent = scoreYou
         scoreAIHTML.textContent = scoreAI
 
-        resultDesktop.className = ""
-        if(finalResult === "You Win!") {
-            resultDesktop.classList.add("blue")
-        } else if(finalResult === "AI Win!") {
-            resultDesktop.classList.add("red")
-        } else {
-            resultDesktop.classList.add("draw")
-        }
-
-        resultDesktop.textContent = finalResult
-        resultDesktop.style = "opacity: 1"
+        showResult();
     })
 })
 
@@ -111,6 +104,20 @@ function resetMessage() {
 // Função que retorna a opção da IA
 function chooseOptionAI() {
     return Math.floor(Math.random() * 3)
+}
+
+function showResult() {
+    resultDesktop.className = ""
+    if(finalResult === "You Win!") {
+        resultDesktop.classList.add("blue")
+    } else if(finalResult === "AI Win!") {
+        resultDesktop.classList.add("red")
+    } else {
+        resultDesktop.classList.add("draw")
+    }
+
+    resultDesktop.textContent = finalResult
+    resultDesktop.style = "opacity: 1"
 }
 
 // Função que retorna o resultado
