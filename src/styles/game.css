@@ -51,7 +51,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 0.70em;
+    padding: 0.70em 0.80em;
     background-color: var(--color-message-p);
     border-radius: 50%;
     cursor: pointer;
