@@ -5,26 +5,25 @@ const body = document.getElementById("body")
 const main = document.getElementById("main")
 const liYou = document.querySelectorAll("#optionsYou li")
 const iconsYou = document.querySelectorAll(".icons")
-const liIA = document.querySelectorAll("#optionsAI li")
+const liMachine = document.querySelectorAll("#optionsMachine li")
 const messageChoosingYou = document.getElementById("messageYou")
-const messageChoosingAI = document.getElementById("messageAI")
-const containerAI = document.querySelector(".container_IA")
-const newContainerAI = document.getElementById("optionsAI")
+const messageChoosingMachine = document.getElementById("messagemachine")
+const containerMachine = document.querySelector(".container_machine")
+const newContainerMachine = document.getElementById("optionsMachine")
 const content = document.getElementsByClassName("content")
-const scoreAIHTML = document.querySelector("#score > p:first-child")
+const scoreMachineHTML = document.querySelector("#score > p:first-child")
 const scoreYouHTML = document.querySelector("#score > p:last-child")
 const resetBtn = document.getElementById("reset")
 const againBtn = document.getElementById("again")
 const resultDesktop = document.getElementById("result-desktop")
-const resultMobile = document.getElementById("result-mobile")
 
 // Escolhas
 let chooseYou
-let chooseAI
+let chooseMachine
 
 // Variáveis que controlam o score
 let scoreYou = 0
-let scoreAI = 0
+let scoreMachine = 0
 
 // Variável que pega o resultado do jogo
 let finalResult
@@ -55,26 +54,26 @@ function clickOption(e, path) {
         chooseYou = Number(e.target.dataset.option)
     }
     selectOptions(liYou, chooseYou);
-    chooseAI = chooseOptionAI();
-    selectOptions(liIA, chooseAI)
+    chooseMachine = chooseOptionAI();
+    selectOptions(liMachine, chooseMachine)
 
     messageChoosingYou.textContent = chooseMessage('You', chooseYou)
-    messageChoosingAI.textContent = chooseMessage('IA', chooseAI)
-    containerAI.classList.add("none")
-    newContainerAI.classList.remove("none")
+    messageChoosingMachine.textContent = chooseMessage('Machine', chooseMachine)
+    containerMachine.classList.add("none")
+    newContainerMachine.classList.remove("none")
 
-    finalResult = result(chooseAI, chooseYou)
+    finalResult = result(chooseMachine, chooseYou)
     scoreYouHTML.textContent = scoreYou
-    scoreAIHTML.textContent = scoreAI
+    scoreMachine.textContent = scoreMachine
 
     showResult();
 }
 
 resetBtn.addEventListener("click", () => {
     scoreYou = 0
-    scoreAI = 0
+    scoreMachine = 0
     scoreYouHTML.textContent = scoreYou
-    scoreAIHTML.textContent = scoreAI
+    scoreMachineHTML.textContent = scoreMachine
 
     resetMessage();
 })
@@ -91,25 +90,25 @@ function selectOptions(options, choose) {
             options[i].classList.add("option-not-select")
             console.log(options[i])
         } else {
-            messageChoosingAI.textContent = `AI choose ${options[i].textContent}`
+            messageChoosingMachine.textContent = `Machine choose ${options[i].textContent}`
         }
     }
 }
 
 // Função que reseta as menssagens
 function resetMessage() {
-    containerAI.classList.remove("none")
-    newContainerAI.classList.add("none")
+    containerMachine.classList.remove("none")
+    newContainerMachine.classList.add("none")
     messageChoosingYou.textContent = `Choose your option`
-    messageChoosingAI.textContent = `Choose your option`
+    messageChoosingMachine.textContent = `Choose your option`
     resultDesktop.style = "opacity: 0"
 
     for(let i = 0; i < liYou.length; i++) {
         liYou[i].classList.remove("option-not-select")
-        liIA[i].classList.remove("option-not-select")
-        if(liYou[i].classList.contains("option-select") || liIA[i].classList.contains("option-select")) {
+        liIMachine[i].classList.remove("option-not-select")
+        if(liYou[i].classList.contains("option-select") || liIMachine[i].classList.contains("option-select")) {
             liYou[i].classList.remove("option-select")
-            liIA[i].classList.remove("option-select")
+            liIMachine[i].classList.remove("option-select")
         }
     }
 }
@@ -142,16 +141,16 @@ function result(optionAI, optionYou) {
         scoreYou++
         return "You Win!"
     } else if(optionAI === 1 && optionYou === 0) {
-        scoreAI++
+        scoreMachine++
         return "AI Win!"
     } else if (optionAI === 1 && optionYou === 2) {
         scoreYou++
         return "You Win!"
     } else if (optionAI === 2 && optionYou === 1) {
-        scoreAI++
+        scoreMachine++
         return "AI Win!"
     } else if(optionAI === 0 && optionYou === 2) {
-        scoreAI++
+        scoreMachine++
         return "AI Win!"
     } else if (optionAI === 2 && optionYou === 0) {
         scoreYou++
