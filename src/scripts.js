@@ -42,14 +42,15 @@ liYou.forEach(item => {
 })
 
 function clickOption(item, e) {
-    messageChoosingAI.textContent = `You choose ${item.textContent}`
-    containerAI.classList.add("none")
-    newContainerAI.classList.remove("none")
-
     chooseYou = Number(e.target.dataset.option)
     selectOptions(liYou, chooseYou);
     chooseAI = chooseOptionAI();
     selectOptions(liIA, chooseAI)
+
+    messageChoosingYou.textContent = chooseMessage('You', chooseYou)
+    messageChoosingAI.textContent = chooseMessage('IA', chooseAI)
+    containerAI.classList.add("none")
+    newContainerAI.classList.remove("none")
 
     finalResult = result(chooseAI, chooseYou)
     scoreYouHTML.textContent = scoreYou
@@ -145,5 +146,15 @@ function result(optionAI, optionYou) {
         return "You Win!"
     } else {
         return "Draw!"
+    }
+}
+
+function chooseMessage(str, num) {
+    if(num === 0) {
+        return `${str} choose Rock`
+    } else if(num === 1) {
+        return `${str} choose Paper`
+    } else {
+        return `${str} choose Scissors`
     }
 }
