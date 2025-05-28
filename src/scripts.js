@@ -37,23 +37,26 @@ openBtn.onclick = () => {
 
 liYou.forEach(item => {
     item.addEventListener("click", (e) => {
-        messageChoosingYou.textContent = `You choose ${item.textContent}`
-        containerAI.classList.add("none")
-        newContainerAI.classList.remove("none")
-
-        // Selecionando opções
-        chooseYou = Number(e.target.dataset.option)
-        selectOptions(liYou, chooseYou);
-        chooseAI = chooseOptionAI();
-        selectOptions(liIA, chooseAI)
-
-        finalResult = result(chooseAI, chooseYou)
-        scoreYouHTML.textContent = scoreYou
-        scoreAIHTML.textContent = scoreAI
-
-        showResult();
+        clickOption(item, e)
     })
 })
+
+function clickOption(item, e) {
+    messageChoosingAI.textContent = `You choose ${item.textContent}`
+    containerAI.classList.add("none")
+    newContainerAI.classList.remove("none")
+
+    chooseYou = Number(e.target.dataset.option)
+    selectOptions(liYou, chooseYou);
+    chooseAI = chooseOptionAI();
+    selectOptions(liIA, chooseAI)
+
+    finalResult = result(chooseAI, chooseYou)
+    scoreYouHTML.textContent = scoreYou
+    scoreAIHTML.textContent = scoreAI
+
+    showResult();
+}
 
 resetBtn.addEventListener("click", () => {
     scoreYou = 0
