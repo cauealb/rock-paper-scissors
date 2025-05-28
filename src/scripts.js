@@ -4,6 +4,7 @@ const menu = document.getElementById("menu")
 const body = document.getElementById("body")
 const main = document.getElementById("main")
 const liYou = document.querySelectorAll("#optionsYou li")
+const iconsYou = document.querySelectorAll(".icons")
 const liIA = document.querySelectorAll("#optionsAI li")
 const messageChoosingYou = document.getElementById("messageYou")
 const messageChoosingAI = document.getElementById("messageAI")
@@ -37,12 +38,22 @@ openBtn.onclick = () => {
 
 liYou.forEach(item => {
     item.addEventListener("click", (e) => {
-        clickOption(item, e)
+        clickOption(e, 'li')
     })
 })
 
-function clickOption(item, e) {
-    chooseYou = Number(e.target.dataset.option)
+iconsYou.forEach(item => {
+    item.addEventListener("click", (e) => {
+        clickOption(e.target.parentElement, 'img')
+    })
+})
+
+function clickOption(e, path) {
+    if(path === 'img') {
+        chooseYou = Number(e.dataset.option)
+    } else {
+        chooseYou = Number(e.target.dataset.option)
+    }
     selectOptions(liYou, chooseYou);
     chooseAI = chooseOptionAI();
     selectOptions(liIA, chooseAI)
