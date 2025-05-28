@@ -52,7 +52,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 1.7em 0.60em;
+    padding: 0.70em 0.80em;
     background-color: var(--color-message-p);
     border-radius: 50%;
     cursor: pointer;
@@ -73,6 +73,11 @@
 /* Botão que foi clicado */
 .option-select {
     transform: translateY(-7px);
+}
+
+.icons {
+    width: 50px;
+    padding: 0.30em;
 }
 
 #optionsAI {
