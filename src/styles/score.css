@@ -12,11 +12,16 @@
 
 #scoreboard > p:first-child {
     color: var(--color-red);
+    font-size: 1.6em;
 }
 
 #scoreboard > p:last-child {
     color: var(--color-blue);
     text-transform: uppercase;
+}
+
+#score {
+    margin-right: 1em;
 }
 
 #score p:first-child {
