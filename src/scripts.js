@@ -98,15 +98,14 @@ function resetMessage() {
     containerMachine.classList.remove("none")
     newContainerMachine.classList.add("none")
     messageChoosingYou.textContent = `Choose your option`
-    messageChoosingMachine.textContent = `Choose your option`
     resultDesktop.style = "opacity: 0"
 
     for(let i = 0; i < liYou.length; i++) {
         liYou[i].classList.remove("option-not-select")
-        liIMachine[i].classList.remove("option-not-select")
-        if(liYou[i].classList.contains("option-select") || liIMachine[i].classList.contains("option-select")) {
+        liMachine[i].classList.remove("option-not-select")
+        if(liYou[i].classList.contains("option-select") || liMachine[i].classList.contains("option-select")) {
             liYou[i].classList.remove("option-select")
-            liIMachine[i].classList.remove("option-select")
+            liMachine[i].classList.remove("option-select")
         }
     }
 }
