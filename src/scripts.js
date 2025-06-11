@@ -64,7 +64,7 @@ function clickOption(e, path) {
 
     finalResult = result(chooseMachine, chooseYou)
     scoreYouHTML.textContent = scoreYou
-    scoreMachine.textContent = scoreMachine
+    scoreMachineHTML.textContent = scoreMachine
 
     showResult();
 }
