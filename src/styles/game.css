@@ -70,6 +70,10 @@
     pointer-events: none;
 }
 
+#optionsMachine {
+    margin-top: 4.9em;
+}
+
 /* Botão que foi clicado */
 .option-select {
     transform: translateY(-7px);
