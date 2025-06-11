@@ -3,12 +3,12 @@
     justify-content: center;
 }
 
-.container_IA {
+.container_machine {
     justify-content: center;
     align-items: center;
 }
 
-.container_IA img{
+.container_machine img{
     width: 12em;
     margin-inline: auto;
 }
