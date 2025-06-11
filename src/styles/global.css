@@ -70,4 +70,12 @@ body {
     #result-desktop {
         position: initial;
     }
+
+    #score {
+        margin-right: 1.6em;
+    }
+
+    #scoreboard > p:first-child {
+        font-size: 2em;
+    }
 }
