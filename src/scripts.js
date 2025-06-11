@@ -7,7 +7,7 @@ const liYou = document.querySelectorAll("#optionsYou li")
 const iconsYou = document.querySelectorAll(".icons")
 const liMachine = document.querySelectorAll("#optionsMachine li")
 const messageChoosingYou = document.getElementById("messageYou")
-const messageChoosingMachine = document.getElementById("messagemachine")
+const messageChoosingMachine = document.getElementById("messageMachine")
 const containerMachine = document.querySelector(".container_machine")
 const newContainerMachine = document.getElementById("optionsMachine")
 const content = document.getElementsByClassName("content")
@@ -57,10 +57,10 @@ function clickOption(e, path) {
     chooseMachine = chooseOptionAI();
     selectOptions(liMachine, chooseMachine)
 
-    messageChoosingYou.textContent = chooseMessage('You', chooseYou)
-    messageChoosingMachine.textContent = chooseMessage('Machine', chooseMachine)
     containerMachine.classList.add("none")
     newContainerMachine.classList.remove("none")
+    messageChoosingYou.textContent = chooseMessage('You', chooseYou)
+    messageChoosingMachine.textContent = chooseMessage('Machine', chooseMachine)
 
     finalResult = result(chooseMachine, chooseYou)
     scoreYouHTML.textContent = scoreYou
@@ -89,8 +89,6 @@ function selectOptions(options, choose) {
         if(!options[i].classList.contains("option-select")) {
             options[i].classList.add("option-not-select")
             console.log(options[i])
-        } else {
-            messageChoosingMachine.textContent = `Machine choose ${options[i].textContent}`
         }
     }
 }
