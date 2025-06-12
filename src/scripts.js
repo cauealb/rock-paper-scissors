@@ -88,7 +88,6 @@ function styleSelectOptions(options, choose) {
     for(let i = 0; i < options.length; i++) {
         if(!options[i].classList.contains("option-select")) {
             options[i].classList.add("option-not-select")
-            console.log(options[i])
         }
     }
 }
