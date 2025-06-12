@@ -37,25 +37,25 @@ openBtn.onclick = () => {
 
 liYou.forEach(item => {
     item.addEventListener("click", (e) => {
-        clickOption(e, 'li')
+        handleClickOption(e, 'li')
     })
 })
 
 iconsYou.forEach(item => {
     item.addEventListener("click", (e) => {
-        clickOption(e.target.parentElement, 'img')
+        handleClickOption(e.target.parentElement, 'img')
     })
 })
 
-function clickOption(e, path) {
+function handleClickOption(e, path) {
     if(path === 'img') {
         chooseYou = Number(e.dataset.option)
     } else {
         chooseYou = Number(e.target.dataset.option)
     }
-    selectOptions(liYou, chooseYou);
+    styleSelectOptions(liYou, chooseYou);
     chooseMachine = chooseOptionAI();
-    selectOptions(liMachine, chooseMachine)
+    styleSelectOptions(liMachine, chooseMachine)
 
     containerMachine.classList.add("none")
     newContainerMachine.classList.remove("none")
@@ -75,15 +75,15 @@ resetBtn.addEventListener("click", () => {
     scoreYouHTML.textContent = scoreYou
     scoreMachineHTML.textContent = scoreMachine
 
-    resetMessage();
+    handleResetOptions();
 })
 
 againBtn.addEventListener("click", () => {
-    resetMessage();
+    handleResetOptions();
 })
 
 // Funções que pega o valor que foi selecionado
-function selectOptions(options, choose) {
+function styleSelectOptions(options, choose) {
     options[choose].classList.add("option-select")
     for(let i = 0; i < options.length; i++) {
         if(!options[i].classList.contains("option-select")) {
@@ -94,7 +94,7 @@ function selectOptions(options, choose) {
 }
 
 // Função que reseta as menssagens
-function resetMessage() {
+function handleResetOptions() {
     containerMachine.classList.remove("none")
     newContainerMachine.classList.add("none")
     messageChoosingYou.textContent = `Choose your option`
