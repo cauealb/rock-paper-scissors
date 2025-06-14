@@ -138,16 +138,16 @@ function result(optionAI, optionYou) {
         return "You Win!"
     } else if(optionAI === 1 && optionYou === 0) {
         scoreMachine++
-        return "AI Win!"
+        return "Machine Win!"
     } else if (optionAI === 1 && optionYou === 2) {
         scoreYou++
         return "You Win!"
     } else if (optionAI === 2 && optionYou === 1) {
         scoreMachine++
-        return "AI Win!"
+        return "Machine Win!"
     } else if(optionAI === 0 && optionYou === 2) {
         scoreMachine++
-        return "AI Win!"
+        return "Machine Win!"
     } else if (optionAI === 2 && optionYou === 0) {
         scoreYou++
         return "You Win!"
