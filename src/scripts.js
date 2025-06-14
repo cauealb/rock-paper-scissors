@@ -118,7 +118,7 @@ function showResult() {
     resultDesktop.className = ""
     if(finalResult === "You Win!") {
         resultDesktop.classList.add("blue")
-    } else if(finalResult === "AI Win!") {
+    } else if(finalResult === "Machine Win!") {
         resultDesktop.classList.add("red")
     } else {
         resultDesktop.classList.add("draw")
